@@ -1,0 +1,125 @@
+/* Sky Blue Theme Styling */
+:root {
+  --primary-color: #0099ff;
+  --secondary-color: #e6f5ff;
+  --text-color: #333333;
+  --white: #ffffff;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #0077cc;
+  padding: 10px;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 8px 16px;
+  margin: 0 5px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+nav a:hover, nav a.active {
+  background-color: var(--white);
+  color: #0077cc;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #0077cc;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 20px;
+}
+/* FAQ Accordion Styling */
+.faq-container {
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: inherit;
+}
+
+.faq-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.faq-item {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 14px 18px;
+  transition: all 0.3s ease;
+}
+
+.faq-item[open] {
+  background-color: #ffffff;
+  border-color: #4a90e2;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+  font-weight: bold;
+  font-size: 16px;
+  color: #1a202c;
+  cursor: pointer;
+  outline: none;
+}
+
+.faq-answer {
+  margin-top: 12px;
+  color: #555555;
+  line-height: 1.6;
+  font-size: 15px;
+  padding-top: 8px;
+  border-top: 1px dashed #eee;
+}

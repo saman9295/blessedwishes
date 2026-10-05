@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Blogs &amp; Articles - Blessed Wishes</title>
+  <meta name="description" content="Explore our collection of Islamic birthday wishes, gift box notes, aesthetic card messages, and Duas.">
+  <link rel="canonical" href="https://blessedwishes.netlify.app/blogs.html">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-color: #f8fafc;
+      --card-bg: #ffffff;
+      --primary-color: #0284c7;
+      --primary-dark: #0369a1;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --badge-bg: #002b49;
+      --border-color: #e2e8f0;
+      --btn-bg: #e0f2fe;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      padding-bottom: 60px;
+    }
+
+    /* Navigation Bar */
+    .site-nav {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand-logo {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--primary-dark);
+      text-decoration: none;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 20px;
+      font-size: 0.95rem;
+    }
+    .nav-links a:hover { color: var(--primary-color); }
+
+    /* Header Banner */
+    .blog-header {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      margin-bottom: 40px;
+    }
+    .blog-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .blog-header p {
+      opacity: 0.9;
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Responsive Grid Layout for Cards */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    /* Individual Blog Card */
+    .blog-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Card Image Banner */
+    .card-banner {
+      position: relative;
+      height: 190px;
+      background: #e2e8f0;
+      overflow: hidden;
+    }
+
+    .card-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .blog-card:hover .card-banner img {
+      transform: scale(1.04);
+    }
+
+    .date-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--badge-bg);
+      color: #ffffff;
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .brand-tag {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: rgba(255, 255, 255, 0.92);
+      color: #000;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    /* Content Area */
+    .card-content {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .author-info {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    /* Read More Button */
+    .read-btn {
+      display: inline-block;
+      background: var(--btn-bg);
+      color: var(--primary-color);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+
+    .read-btn:hover {
+      background: var(--primary-color);
+      color: #ffffff;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <nav class="site-nav">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">Blessed Wishes</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="blogs.html" style="color: var(--primary-color); font-weight:700;">Blogs</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Title Banner -->
+  <header class="blog-header">
+    <h1>Our Latest Blogs &amp; Articles</h1>
+    <p>Read inspiring Islamic birthday wishes, aesthetic gift notes, and beautiful Duas for your loved ones.</p>
+  </header>
+
+  <!-- Main Card Grid Container -->
+  <div class="container">
+    <div class="blog-grid" id="blogGrid">
+      <!-- Automatically generated cards will appear here -->
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Blessed Wishes. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // =========================================================================
+    // NAYA BLOG ADD KARNE KE LIYE BUS NICHE LIST MEIN SAMPLE CODE COPY-PASTE KAREIN
+    // HTML / CSS MEIN KISI CODE KO CHHEDNE KI ZAROORAT NAHI HAI!
+    // =========================================================================
+
+    const blogPosts = [
+      {
+        title: "Top 15 Heartfelt Islamic Birthday Wishes & Duas for Loved Ones",
+        date: "01/10/2026",
+        author: "Admin",
+        image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=600&q=80",
+        description: "Discover beautiful Islamic birthday messages, Duas, and greetings to share blessings with your family and friends.",
+        link: "birthday-wishes-blog.html"
+      },
+      {
+        title: "Aesthetic Gift Box Notes & Card Messages for Surprises",
+        date: "28/09/2026",
+        author: "Admin",
+        image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=600&q=80",
+        description: "Looking for short and memorable messages to put inside gift boxes? Explore our curated collection of aesthetic wishes.",
+        link: "gift-notes-blog.html"
+      }
+      // Jab bhi naya blog likhna ho, yahan neeche 1 comma (,) lagayein aur yeh structure paste kar dein:
+      /*
+      ,{
+        title: "Aapke Naye Blog Ka Title",
+        date: "02/10/2026",
+        author: "Admin",
+        image: "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=600&q=80",
+        description: "Yahan blog ka 2-3 lines ka chhota sa summary/introduction likhein...",
+        link: "aapke-blog-file-ka-naam.html"
+      }
+      */
+    ];
+
+    // Automatic Card Generation Script
+    const grid = document.getElementById('blogGrid');
+
+    blogPosts.forEach(post => {
+      const cardHTML = `
+        <article class="blog-card">
+          <div class="card-banner">
+            <span class="date-badge">${post.date}</span>
+            <img src="${post.image}" alt="${post.title}" loading="lazy">
+            <span class="brand-tag">Blessed Wishes</span>
+          </div>
+          <div class="card-content">
+            <div class="author-info">👤 ${post.author}</div>
+            <h2 class="card-title">${post.title}</h2>
+            <p class="card-desc">${post.description}</p>
+            <a href="${post.link}" class="read-btn">Read Article &rarr;</a>
+          </div>
+        </article>
+      `;
+      grid.innerHTML += cardHTML;
+    });
+  </script>
+
+</body>
+</html>

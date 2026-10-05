@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://blessedwishes.netlify.app/sitemap.xml
